@@ -393,7 +393,7 @@ input:checked+.slider:before{transform:translateX(18px)}
 var SUPA_URL='https://hjstlihblzdelaklfmmg.supabase.co';
 var SUPA_KEY='sb_publishable_d8c3pFTgE4eoIJus5XT6fg_vayx8d9n';
 var D={cli:[],ban:[],com:[],pro:[],otr:[]};
-var confirmCb=null,permConfirmCb=null,hoy=new Date(),fechaHoy=hoy.toISOString().slice(0,10);
+var confirmCb=null,permConfirmCb=null,hoy=new Date(),fechaHoy=hoy.toLocaleDateString('es-CL',{timeZone:'America/Santiago',year:'numeric',month:'2-digit',day:'2-digit'}).split('-').reverse().join('-');
 var registroId=null,usuarioActual=null,permisosActual={},editPassUserId=null,historialActual=null;
 var todosClientes=[],fichaActual={id:null,nombre:'',empresa:'',rut:'',telefono1:'',telefono2:'',correo1:'',correo2:'',apodos:[],vehiculos:[],notas:''};
 var PESTANAS=[
