@@ -779,7 +779,7 @@ async function guardar(){
 function newDay(){
   document.getElementById('new-day-modal').style.display='none';D={cli:[],ban:[],com:[],pro:[],otr:[]};
   document.getElementById('efectivo').value='';document.getElementById('aporte-desc').value='';document.getElementById('aporte-monto').value='';
-  registroId=null;fechaHoy=new Date().toISOString().slice(0,10);
+  registroId=null;var _ntz=new Date(new Date().toLocaleString('en-US',{timeZone:'America/Santiago'}));fechaHoy=_ntz.getFullYear()+'-'+String(_ntz.getMonth()+1).padStart(2,'0')+'-'+String(_ntz.getDate()).padStart(2,'0');
   rcli();rban();rcom();rpro();rotr();addCli();addCli();addBan();addCom();addPro();
   setStatus('ok','Nuevo día iniciado');toast('Caja limpia para nuevo día','ok');
 }
