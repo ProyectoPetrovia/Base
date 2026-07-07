@@ -688,7 +688,7 @@ function renderProveedores(){
       var parcial=n(fc.saldo)>0&&n(fc.saldo)<n(fc.monto);
       var badge=pagada?'<span class="badge b-ok">✓ Pagada</span>':parcial?'<span class="badge b-par">Parcial</span>':'<span class="badge b-p">Pendiente</span>';
       html+='<tr'+(pagada?' class="fact-pagada"':'')+' id="fc-'+p.id+'-'+fi+'">';
-      html+='<td><input class="finput" type="text" value="'+esc(fc.num||'')+'" placeholder="N° doc." onchange="updFact('+p.id+','+fi+','num',this.value)"></td>';
+      html+='<td><input class="finput" type="text" value="'+esc(fc.num||'')+'" placeholder="N doc." onchange="updFact('+p.id+','+fi+',\'num\',this.value)"></td>';
       html+='<td><input class="finput" type="text" value="'+esc(fc.conc||'')+'" placeholder="Concepto" onchange="updFact('+p.id+','+fi+','conc',this.value)"></td>';
       html+='<td style="text-align:right"><input class="finput" type="text" inputmode="numeric" value="'+esc(String(fc.monto||''))+'" placeholder="0" style="text-align:right" onchange="updFact('+p.id+','+fi+','monto',this.value)"></td>';
       html+='<td style="text-align:right;font-weight:700;color:'+(pagada?'#2e7d32':parcial?'#1565c0':'#c62828')+'">'+f(n(fc.saldo))+'</td>';
